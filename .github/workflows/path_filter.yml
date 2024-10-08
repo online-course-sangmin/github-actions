@@ -1,0 +1,12 @@
+name: path-filter-workflow
+on:
+  push:
+    paths:
+      - ".github/workflows/part2/*"
+
+jobs:
+  path-filter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: path filter
+        run: echo "This job will run only when the path is .github/workflows/part2/* changed"
