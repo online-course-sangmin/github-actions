@@ -1,4 +1,4 @@
-name: context-workflow-wow
+name: context-workflow
 on: workflow_dispatch
 
 jobs:
