@@ -1,0 +1,12 @@
+name: tag-filter-workflow
+on:
+  push:
+    tags:
+      - "v[0-9]+.[0-9]+.|0-9]+" # v0.0.0 ~ v9.9.9 OK, but v10.0.0, v1.0 NG
+
+jobs:
+  tag-filter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: tag filter
+        run: echo "This job will run only when the tag is v0.0.0 ~ v9.9.9"
