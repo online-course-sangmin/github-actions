@@ -11,7 +11,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: artifact-upload
-          paths: ./hello.txt
+          path: ./hello.txt
 
   download-artifact:
     runs-on: ubuntu-latest
@@ -21,6 +21,6 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: artifact-download
-          paths: ./
+          path: ./
       - name: cat artifact file
         run: cat hello.txt
