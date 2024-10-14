@@ -4,7 +4,7 @@ on: push
 jobs:
   timeout-jobs:
     runs-on: ubuntu-latest
-    timeout-minutes: 1
+    timeout-minutes: 2
     steps:
       - name: loop
         run: |
@@ -14,5 +14,6 @@ jobs:
             count=$((count+1))
             sleep 1
           done
+        timeout-minutes: 1
       - name: timeout-echo-job
         run: echo "This job will run only 1 minute"
