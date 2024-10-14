@@ -1,0 +1,18 @@
+name: timeout-workflow
+on: push
+
+jobs:
+  timeout-jobs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 1
+    steps:
+      - name: loop
+        run: |
+          count=0
+          while true;do
+            echo "count: $count"
+            count=$((count+1))
+            sleep 1
+          done
+      - name: timeout-echo-job
+        run: echo "This job will run only 1 minute"
