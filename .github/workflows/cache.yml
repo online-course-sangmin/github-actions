@@ -16,8 +16,8 @@ jobs:
           node-version: "18"
       - name: Cache node.js modules
         uses: actions/cache@v3
-        with: 
-          path:~/.npm
+        with:
+          path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('my-app/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
